@@ -1,6 +1,6 @@
 # Integrating pfSense with ELasticsearch, Logstash, and Kibana (ELK Stack)
 
-** Prerequisites:**
+**Prerequisites:**
 1. Ubuntu server 16.04
 2. pfSense
 3. Elasticsearch
