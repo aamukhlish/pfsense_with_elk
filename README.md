@@ -1,6 +1,6 @@
 # Integrating pfSense with ELasticsearch, Logstash, and Kibana (ELK Stack)
 
-## Prerequisites:
+** Prerequisites:**
 1. Ubuntu server 16.04
 2. pfSense
 3. Elasticsearch
@@ -9,7 +9,7 @@
 6. Nginx
 7. Java
 
-##Install Java
+**Install Java**
 
 Login as root and install java
 ```
@@ -18,7 +18,7 @@ apt-get update
 apt-get -y install oracle-java8-installer
 ```
 
-##Elasticsearch
+**Elasticsearch**
 
 Import the Elasticsearch public GPG key into APT
 ```
@@ -45,7 +45,7 @@ Next, start and enable the elasticsearch service
 systemctl start elasticsearch
 systemctl enable elasticsearch
 ```
-##Logstash
+**Logstash**
 
 Install logstash using this command
 ```
@@ -89,7 +89,7 @@ nano /etc/logstash/81-pfsense-filter.conf
 nano /etc/logstash/99-elasticsearch-output.conf
 ```
 
-##Kibana
+**Kibana**
 
 Install Nginx using this command :
 ```
@@ -122,7 +122,7 @@ systemctl restart nginx
 ufw allow 'Nginx Full'
 ```
 
-##pfsense
+**pfsense**
 
 1. Login to pfsense
 2. Go to Status -> System Logs -> Settings
@@ -131,7 +131,7 @@ ufw allow 'Nginx Full'
 5. Save
 6. Adjust firewall setting to allow and blokc connection
 
-##Final steps
+**Final steps**
 Restart the ELK Service
 ```
 systemctl restart elasticsearch.service
@@ -140,7 +140,7 @@ systemctl restart kibana.service
 ```
 Login to Kibana by accessing the server address from browser, and configure the dashboard
 
-Credit to :
+**Credit to :**
 1. https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-16-04
 2. http://pfelk.3ilson.com/
 3. https://www.reddit.com/r/PFSENSE/comments/5cppf0/elk_with_pfsense_23_working/
